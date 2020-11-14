@@ -2,16 +2,18 @@
 
 
 // 1. feladat
-console.log(document.querySelectorAll(".button"));
 
-/* function handleClick() {
-    const buttons = document.getElementsByClassName("button");
-for (i = 0; i < buttons.length; i += 1);
+const buttons = document.querySelectorAll(".button").length;
 
+for (let i = 0; i < buttons; i++) {
+    document.querySelectorAll(".button")[i].addEventListener("click", function() {
+        console.log(document.querySelectorAll(".button")[i].innerText);
+    });
 }
- */
 
- // 2. feladat
+
+
+// 2. feladat
 
 const summation = (a = 0, b = 0) => a + b;
 console.log(summation(20));
@@ -21,5 +23,7 @@ console.log(subtraction(45));
 
 // 3. feladat
 
-const personDatalog = (firstName = 'John', lastName = 'Doe', age = '33') => console.log(`My name is ` + firstName +` ` + lastName + `. I'm ` + age + ` years old.`);
-personDatalog();
+const myData = { firstName: 'Éva', lastName: 'Thüringer', age: 44 };
+
+const personDatalog = ({ firstName = 'John', lastName = 'Doe', age = 33 } = {}) => console.log(`My name is ` + firstName + ` ` + lastName + `. I'm ` + age + ` years old.`);
+personDatalog(myData);
