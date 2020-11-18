@@ -3,26 +3,23 @@
 
 // 1. feladat
 
-const handleClick = (element = document.querySelectorAll('.button')) => {
+/* const handleClick = (element = document.querySelectorAll('.button')) => {
     for (let i = 0; i < element.length; i += 1) {
         element[i].addEventListener('click', () =>
             console.log(element[i].innerText));
         }
     }
-handleClick();
+handleClick(); */
 
-/* function handleClick(i) {
-    element[i].addEventListener('click', function () {
-        console.log(element[i].innerText);
-    })
+function handleClick() {
+    const buttons = document.querySelectorAll('.button');
+    for (let i = 0; i < buttons.length; i += 1) {
+        buttons[i].addEventListener('click', () => 
+            console.log(buttons[i].innerText));
+        
+    }
 }
-
-let element = document.querySelectorAll('.button'); */
-
-/* for (let i = 0; i < element.length; i += 1) {
-    handleClick(i);
-} */
-
+handleClick();
 
 
 
